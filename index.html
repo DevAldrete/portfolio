@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" x-data="portfolio()">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Daniel Aldrete — aspiring Cloud Engineer portfolio."
+    />
+    <title>Daniel Aldrete | Cloud Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#home">Daniel Aldrete</a>
+        <button
+          class="menu-button"
+          type="button"
+          @click="menuOpen = !menuOpen"
+          :aria-expanded="menuOpen.toString()"
+        >
+          Menu
+        </button>
+        <div
+          class="nav-links"
+          :class="{ 'is-open': menuOpen }"
+          @click="menuOpen = false"
+        >
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <p class="eyebrow">Aspiring Cloud Engineer</p>
+        <h1>Building reliable cloud systems with clean automation.</h1>
+        <p class="hero-copy">
+          Daniel Aldrete focuses on cloud infrastructure, Linux, networking, and
+          automation. Seeking opportunities to grow into production-grade cloud
+          engineering.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#projects">View work</a>
+          <a class="button" href="mailto:aldretelearns@gmail.com">Contact me</a>
+        </div>
+      </section>
+
+      <section id="about" class="section grid-section">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Cloud-minded, practical, and always learning.</h2>
+        </div>
+        <p>
+          I am preparing for cloud engineering roles by learning core
+          infrastructure concepts: compute, storage, networking, security,
+          monitoring, and CI/CD. I enjoy turning manual tasks into repeatable
+          scripts and documented workflows.
+        </p>
+      </section>
+
+      <section id="skills" class="section">
+        <p class="eyebrow">Skills</p>
+        <h2>Technical focus</h2>
+        <div class="cards">
+          <template x-for="skill in skills" :key="skill.title">
+            <article class="card">
+              <h3 x-text="skill.title"></h3>
+              <p x-text="skill.description"></p>
+            </article>
+          </template>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <p class="eyebrow">Projects</p>
+        <h2>Portfolio starters</h2>
+        <div class="cards">
+          <template x-for="project in projects" :key="project.title">
+            <article class="card">
+              <span class="tag" x-text="project.tag"></span>
+              <h3 x-text="project.title"></h3>
+              <p x-text="project.description"></p>
+            </article>
+          </template>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s connect.</h2>
+        <p>
+          Open to internships, junior cloud roles, and hands-on infrastructure
+          projects.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="mailto:aldretelearns@gmail.com"
+            >daniel@example.com</a
+          >
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/aldrete"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            class="button"
+            href="https://github.com/DevAldrete"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span x-text="new Date().getFullYear()"></span> Daniel Aldrete</p>
+    </footer>
+
+    <script>
+      function portfolio() {
+        return {
+          menuOpen: false,
+          skills: [
+            {
+              title: "Cloud fundamentals",
+              description:
+                "AWS/Azure concepts, virtual machines, storage, IAM, regions, and availability.",
+            },
+            {
+              title: "Linux and networking",
+              description:
+                "Command line workflows, SSH, DNS, HTTP, firewalls, and troubleshooting.",
+            },
+            {
+              title: "Automation",
+              description:
+                "Bash scripting, infrastructure documentation, Git, and repeatable deployments.",
+            },
+          ],
+          projects: [
+            {
+              tag: "Cloud Lab",
+              title: "Static website hosting",
+              description:
+                "Deploy a static site to cloud object storage with CDN, DNS, and HTTPS.",
+            },
+            {
+              tag: "Automation",
+              title: "Server setup script",
+              description:
+                "Bootstrap a Linux server with users, packages, firewall rules, and logging.",
+            },
+            {
+              tag: "Monitoring",
+              title: "Uptime dashboard",
+              description:
+                "Track service health, alert on failures, and document incident response steps.",
+            },
+          ],
+        };
+      }
+    </script>
+  </body>
+</html>
