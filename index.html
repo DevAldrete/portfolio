@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Daniel Aldrete — aspiring Cloud Engineer portfolio."
+      content="Daniel Aldrete — Backend Engineer portfolio."
     />
-    <title>Daniel Aldrete | Cloud Engineer</title>
+    <title>Daniel Aldrete | Backend Engineer</title>
     <link rel="stylesheet" href="styles.css" />
     <script
       defer
@@ -41,12 +41,12 @@
 
     <main id="home">
       <section class="hero section">
-        <p class="eyebrow">Aspiring Cloud Engineer</p>
-        <h1>Building reliable cloud systems with clean automation.</h1>
+        <p class="eyebrow">Backend Engineer</p>
+        <h1>Building scalable backend systems with clean, efficient code.</h1>
         <p class="hero-copy">
-          Daniel Aldrete focuses on cloud infrastructure, Linux, networking, and
-          automation. Seeking opportunities to grow into production-grade cloud
-          engineering.
+          Daniel Aldrete builds backend systems with Go, Java, and modern web
+          frameworks. Passionate about distributed systems, databases, and
+          clean API design.
         </p>
         <div class="actions">
           <a class="button primary" href="#projects">View work</a>
@@ -57,19 +57,19 @@
       <section id="about" class="section grid-section">
         <div>
           <p class="eyebrow">About</p>
-          <h2>Cloud-minded, practical, and always learning.</h2>
+          <h2>Backend-minded, practical, and always building.</h2>
         </div>
         <p>
-          I am preparing for cloud engineering roles by learning core
-          infrastructure concepts: compute, storage, networking, security,
-          monitoring, and CI/CD. I enjoy turning manual tasks into repeatable
-          scripts and documented workflows.
+          I build backend systems using Go and Spring Boot, with frontends in
+          React and Svelte when needed. I work across MongoDB, PostgreSQL, AWS,
+          and GCP — and I enjoy writing optimized tools in C and Zig.
+          Lately contributing to Prometheus.
         </p>
       </section>
 
       <section id="skills" class="section">
         <p class="eyebrow">Skills</p>
-        <h2>Technical focus</h2>
+        <h2>Tech stack &amp; tools</h2>
         <div class="cards">
           <template x-for="skill in skills" :key="skill.title">
             <article class="card">
@@ -82,7 +82,7 @@
 
       <section id="projects" class="section">
         <p class="eyebrow">Projects</p>
-        <h2>Portfolio starters</h2>
+        <h2>Recent work</h2>
         <div class="cards">
           <template x-for="project in projects" :key="project.title">
             <article class="card">
@@ -98,8 +98,8 @@
         <p class="eyebrow">Contact</p>
         <h2>Let’s connect.</h2>
         <p>
-          Open to internships, junior cloud roles, and hands-on infrastructure
-          projects.
+          Open to backend engineering roles — building reliable services, APIs,
+          and distributed systems.
         </p>
         <div class="actions">
           <a class="button primary" href="mailto:aldretelearns@gmail.com"
@@ -133,39 +133,56 @@
           menuOpen: false,
           skills: [
             {
-              title: "Cloud fundamentals",
+              title: "Backend",
               description:
-                "AWS/Azure concepts, virtual machines, storage, IAM, regions, and availability.",
+                "Go, Spring Boot (Java), REST & gRPC APIs, distributed systems, and clean architecture.",
             },
             {
-              title: "Linux and networking",
+              title: "Frontend & Databases",
               description:
-                "Command line workflows, SSH, DNS, HTTP, firewalls, and troubleshooting.",
+                "React, Svelte, MongoDB, PostgreSQL, SQL & NoSQL design, data modeling.",
             },
             {
-              title: "Automation",
+              title: "Cloud & DevOps",
               description:
-                "Bash scripting, infrastructure documentation, Git, and repeatable deployments.",
+                "AWS, Google Cloud, Docker, Git, GitHub, CI/CD, and infrastructure as code.",
+            },
+            {
+              title: "Systems & AI",
+              description:
+                "C, Zig, performance optimization, CLI tooling, and AI-assisted development workflows.",
             },
           ],
           projects: [
             {
-              tag: "Cloud Lab",
-              title: "Static website hosting",
+              tag: "Algorithms",
+              title: "Algorithm Visualizer",
               description:
-                "Deploy a static site to cloud object storage with CDN, DNS, and HTTPS.",
+                "Interactive visualizations of sorting, searching, and graph algorithms to understand data structures.",
             },
             {
-              tag: "Automation",
-              title: "Server setup script",
+              tag: "Full-Stack",
+              title: "Expense Tracker",
               description:
-                "Bootstrap a Linux server with users, packages, firewall rules, and logging.",
+                "Multi-tenant expense tracking app with user isolation, shared budgets, and reporting.",
             },
             {
-              tag: "Monitoring",
-              title: "Uptime dashboard",
+              tag: "Dev Tools",
+              title: "Task Manager",
               description:
-                "Track service health, alert on failures, and document incident response steps.",
+                "Linear-inspired task manager for engineering teams with sprints, issues, and kanban.",
+            },
+            {
+              tag: "Systems",
+              title: "C/Zig Tooling",
+              description:
+                "High-performance CLI tools and utilities in C and Zig for personal workflow optimization.",
+            },
+            {
+              tag: "Open Source",
+              title: "Prometheus Contributor",
+              description:
+                "Contributing to the open-source monitoring and alerting toolkit.",
             },
           ],
         };
